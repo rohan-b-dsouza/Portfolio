@@ -1,0 +1,336 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #131314;
+    line-height: 1.6;
+}
+
+.main-container {
+    margin-left:200px;
+    margin-right: auto;
+    display:grid;
+    max-width:1200px;
+    grid-template-columns: 450px 1fr;
+    gap:60px;
+    padding-top:40px;
+}
+
+.sidebar {
+    padding:40px;
+    border-radius:16px;
+    border: 1px solid #2c2c2c;
+    background-color: #1A1B1C;
+    height: 90vh;
+    position: sticky;
+    top:40px;
+}
+
+.main-content {
+    border: 1px solid #2c2c2c;
+    border-radius:10px;
+    background-color: #1A1B1C;
+    padding:40px;
+}
+
+/* Profile Section  */
+
+.profile {
+    /*text-align is a CSS property that controls the horizontal alignment of inline content inside a block-level element (like text, inline images, or inline-block elements). */
+    text-align:center;
+}
+
+.profile img {
+    height: 120px;
+    width:120px;
+    border-radius: 50%;
+    border: 1px solid #2c2c2c;
+}
+
+.profile h2 {
+    color:#e0e0e0;
+    font-size:1.5rem;
+    font-weight:700;
+    margin-top:20px;
+}
+
+.profile p {
+    color: #CEFF00;
+    background-color: #1A1B1C;
+    padding:5px 15px;
+    border:1px solid #2c2c2c;
+    font-size:0.8rem;
+    border-radius:8px;
+    display:inline-block;
+    margin-top:10px;
+}
+
+/* Contact Information */
+
+.contact {
+    margin-top:30px;
+    border-top:1px solid #2c2c2c;
+    padding-top:20px;
+}
+
+.info-header {
+    color:#e0e0e0;
+    font-size:0.8rem;
+}
+
+.info-value {
+    color:#dcdcdc;   
+    text-decoration: none;
+}
+
+.email, .phone {
+    margin-bottom:10px;
+}
+
+/* Socials */
+
+.social {
+    margin-top:30px;
+    border-top:1px solid #2c2c2c;
+    padding-top:20px;
+    text-align: center;
+}
+
+.social img {
+    height:24px;
+    width:24px;
+    margin-left:8px;
+    filter: brightness(0) saturate(100%) invert(98%) sepia(1%) saturate(20%) hue-rotate(4deg) brightness(94%) contrast(89%);
+    transition: filter 0.2s ease;
+}
+
+.social img:hover {
+    filter:none;
+}
+
+/* Main Content */
+
+/* Navigation */
+
+#navigation {
+    padding-bottom: 20px;
+    border-bottom:1px solid #2c2c2c;
+}
+
+nav {
+    gap:30px;
+    display:flex;
+    justify-content: flex-end;
+}
+
+nav a {
+    text-decoration: none;
+    color:#e0e0e0;
+    font-weight:500;
+    transition:color 0.3s ease;
+}
+
+nav a:hover {
+    color:#CEFF00;
+}
+
+/* About Me */
+
+#about {
+    margin-top:25px;
+    margin-bottom: 40px;
+}
+
+.heading {
+    color: #e0e0e0;
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.line {
+    width:60px;
+    height: 5px;
+    background-color: #CEFF00;
+    margin-bottom:15px;
+}
+
+.content {
+    margin-top:25px;
+    text-align: justify;
+    color:#dcdcdc;
+}
+
+
+/* Skills */
+
+#skills {
+    margin-bottom: 40px;
+}
+
+.grid-container {
+    display:grid;
+    /* Study this */
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap:30px;
+}
+
+.grid-item img {
+    height: 48px;
+    width: 48px;
+    filter: brightness(0) saturate(100%) invert(91%) sepia(74%) saturate(1915%) hue-rotate(13deg) brightness(101%) contrast(104%);
+}
+
+.grid-item {
+    padding:20px;
+    border-radius:10px;
+    border: 2px solid #2c2c2c;
+    background-color: #131314;
+    color:#dcdcdc;
+    text-align: center;
+    margin-top:20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 5px #131314c5;
+}
+
+.grid-item h3 {
+    font-size:1rem;
+    font-weight: 500;
+}
+
+/* Education */
+
+#education {
+    margin-bottom: 40px;
+}
+
+.year {
+    font-size:0.9rem;
+    color:#dcdcdc;
+    margin-bottom:5px;
+}
+
+.degree {
+    color:#e0e0e0;
+    font-size:1.2rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.college {
+    color:#e0e0e0;
+    font-style:italic;
+    margin-bottom: 10px;
+}
+
+.cgpa {
+    color:#e0e0e0;
+}
+
+span {
+    font-weight: 600;
+}
+
+.bullet {
+    z-index:5; /* To overlap bullet over the liner*/
+    height:10px;
+    width:10px;
+    border-radius:50%;
+    border: 3px solid #CEFF00;
+    position:absolute;
+    top:5px;
+    left:0px;
+}
+
+.education-1 {
+    padding-left:30px;
+    position: relative;
+}
+
+.edu-container {
+    position: relative;
+    margin-top:30px;
+}
+
+.liner {
+    position: absolute;
+    width:2px;
+    left:6px;
+    top:0px;
+    bottom:-2px;
+    border-left:4px solid #2c2c2c;
+}
+
+.portfolio-container {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:30px;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card {
+    width: 430px;
+    border-radius: 10px;
+    background-color: #131314;
+    overflow: hidden;
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-container {
+    margin-top:30px;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 10px 5px #131314c5;
+}
+
+.card-content {
+    padding:35px;
+}
+
+.card-content h3 {
+    color:#dcdcdc;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.card-content p {
+    color:#dcdcdc;
+    line-height: 1.6;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.card span {
+    background-color: #1A1B1C;
+    color:#CEFF00;
+    padding:4px 8px;
+    border-radius: 5px;
+    font-size:0.75rem;
+    margin-right: 5px;
+}
+
+/* <!-- 
+CEFF00 volt
+    28282B matte black
+    353935 onyx
+-->
+
+<!-- 
+text : e0e0e0
+accent : CEFF00;
+bgc : 1A1B1C
+border : 2c2c2c
+ --> */
