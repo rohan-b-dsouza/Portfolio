@@ -5,18 +5,18 @@
 }
 
 body {
+    align-items: center;
     font-family: "Open Sans", sans-serif;
     background-color: #131314;
     line-height: 1.6;
 }
 
 .main-container {
-    margin-left:200px;
-    margin-right: auto;
+    max-width: 1200px;
+    margin:auto;
     display:grid;
-    max-width:1200px;
-    grid-template-columns: 450px 1fr;
-    gap:60px;
+    grid-template-columns: 350px 1fr;
+    gap:50px;
     padding-top:40px;
 }
 
@@ -94,16 +94,16 @@ body {
 /* Socials */
 
 .social {
-    margin-top:30px;
+    margin-top:45px;
     border-top:1px solid #2c2c2c;
-    padding-top:20px;
+    padding-top:30px;
     text-align: center;
 }
 
 .social img {
     height:24px;
     width:24px;
-    margin-left:8px;
+    margin-left:10px;
     filter: brightness(0) saturate(100%) invert(98%) sepia(1%) saturate(20%) hue-rotate(4deg) brightness(94%) contrast(89%);
     transition: filter 0.2s ease;
 }
@@ -162,6 +162,7 @@ nav a:hover {
     margin-top:25px;
     text-align: justify;
     color:#dcdcdc;
+    
 }
 
 
@@ -174,7 +175,7 @@ nav a:hover {
 .grid-container {
     display:grid;
     /* Study this */
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap:30px;
 }
 
@@ -246,7 +247,7 @@ span {
     border: 3px solid #CEFF00;
     position:absolute;
     top:5px;
-    left:0px;
+    left:2.5px;
 }
 
 .education-1 {
@@ -276,12 +277,12 @@ span {
 
 .card img {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
+    object-fit:cover;
 }
 
+
 .card {
-    width: 430px;
+    width:100%;
     border-radius: 10px;
     background-color: #131314;
     overflow: hidden;
@@ -321,6 +322,58 @@ span {
     font-size:0.75rem;
     margin-right: 5px;
 }
+
+@media screen and (max-width:1200px){
+    .main-container {
+        grid-template-columns: 1fr;
+        padding:20px;
+    }
+    .sidebar {
+        position:static;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width:750px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+     #navigation nav {
+        /* Adjust nav for smaller screens */
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    #about .content {
+        text-align: left;
+    }
+    .sidebar, .main-content {
+        padding:20px;
+    }
+    .info-value {
+        overflow-wrap: break-word;
+    }
+}
+
+@media screen and (max-width:400px) {
+
+    #navigation nav {
+        /* Adjust nav for smaller screens */
+        flex-direction: column;
+        align-items: center;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
 
 /* <!-- 
 CEFF00 volt
